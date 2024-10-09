@@ -1,2 +1,3 @@
 # AP-Human-Geography-Zombie-Project.
 ...
+honestly i have no idea what im doing i join github 2 days ago (oct 6 24)
