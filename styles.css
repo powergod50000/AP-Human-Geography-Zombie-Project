@@ -18,10 +18,10 @@ main {
 
 footer {
     text-align: center;
-    padding: 10px;
+    height: 50px;
     background: #007bff;
     color: white;
-    position: sticky;
+    position: absolute;
     width: 100%;
     bottom: 0;
 }
