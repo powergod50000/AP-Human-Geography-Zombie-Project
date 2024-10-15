@@ -21,7 +21,7 @@ footer {
     padding: 10px;
     background: #007bff;
     color: white;
-    position: fixed;
+    position: sticky;
     width: 100%;
     bottom: 0;
 }
