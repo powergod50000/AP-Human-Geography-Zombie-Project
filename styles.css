@@ -18,10 +18,10 @@ main {
 
 footer {
     text-align: center;
-    height: 50px;
+    height: 10px;
     background: #007bff;
     color: white;
-    position: fixed;
+    position: absolute;
     width: 100%;
     bottom: 0;
 }
