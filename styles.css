@@ -1,27 +1,26 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  min-height: 100vh;
+  margin: 0;
 }
 
 header {
-    background: #007bff;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
+  min-height: 50px;
+  background: lightcyan;
 }
 
 footer {
-    text-align: center;
-    height: 10px;
-    background: #007bff;
-    color: white;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+  min-height: 50px;
+  background: PapayaWhip;
+}
+
+
+/* The article fills all the space between header & footer */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
