@@ -1,0 +1,283 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.App {
+  text-align: center;
+}
+
+/* Stats Cards */
+.stats-card {
+  @apply bg-gradient-to-r p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer;
+}
+
+.stats-card-total {
+  @apply from-blue-500 to-blue-600;
+}
+
+.stats-card-completed {
+  @apply from-green-500 to-green-600;
+}
+
+.stats-card-pending {
+  @apply from-orange-500 to-orange-600;
+}
+
+.stats-card-projects {
+  @apply from-purple-500 to-purple-600;
+}
+
+/* Navigation Items */
+.nav-item {
+  @apply flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-200;
+}
+
+.nav-item-active {
+  @apply bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-md;
+}
+
+.nav-item-inactive {
+  @apply text-gray-600 hover:text-purple-600 hover:bg-purple-50;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-300 rounded-full hover:bg-purple-400;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Form Focus States */
+input:focus, textarea:focus, select:focus {
+  @apply ring-2 ring-purple-500 ring-opacity-50 border-transparent;
+}
+
+/* Button Hover Effects */
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-6 py-3 rounded-xl font-medium hover:from-purple-600 hover:to-indigo-700 transition-all duration-200 transform hover:-translate-y-1 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-medium hover:bg-gray-200 transition-colors;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .stats-card {
+    @apply p-4;
+  }
+  
+  .nav-item {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Light theme with dark text - ensuring good contrast */
+body {
+  @apply bg-gradient-to-br from-purple-50 to-indigo-100 text-gray-900;
+}
+
+/* Ensure all text has proper contrast */
+.text-primary {
+  @apply text-gray-900;
+}
+
+.text-secondary {
+  @apply text-gray-600;
+}
+
+.text-muted {
+  @apply text-gray-500;
+}
+
+/* Priority badges */
+.priority-high {
+  @apply bg-red-100 text-red-800;
+}
+
+.priority-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.priority-low {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Status badges */
+.status-todo {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-in-progress {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-done {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Loading animation */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Notification styles */
+.notification-unread {
+  @apply bg-purple-50 border-l-4 border-l-purple-500;
+}
+
+.notification-read {
+  @apply bg-gray-50 border-l-4 border-l-gray-300;
+}
+
+/* Subject color indicators */
+.subject-indicator {
+  @apply w-3 h-3 rounded-full inline-block mr-2;
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply bg-gray-200 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply bg-gradient-to-r from-purple-500 to-indigo-600 h-full transition-all duration-500 ease-out;
+}
+
+/* Kanban board styles */
+.kanban-column {
+  @apply bg-gray-50 rounded-2xl p-4 min-h-96;
+}
+
+.kanban-card {
+  @apply bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-200 cursor-grab;
+}
+
+.kanban-card:active {
+  @apply cursor-grabbing;
+}
+
+/* Empty state styles */
+.empty-state {
+  @apply text-center py-12;
+}
+
+.empty-state-icon {
+  @apply w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4;
+}
+
+/* Responsive grid */
+@media (max-width: 640px) {
+  .grid-responsive {
+    @apply grid-cols-1;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-responsive {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-responsive {
+    @apply grid-cols-3;
+  }
+}
+
+/* Task completion animation */
+.task-completed {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.task-completed:hover {
+  @apply scale-105;
+}
+
+/* Invite code styling */
+.invite-code {
+  @apply font-mono text-lg font-bold text-purple-600 bg-purple-50 px-4 py-2 rounded-lg border-2 border-purple-200;
+}
+
+/* Success/Error message styling */
+.message-success {
+  @apply bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-xl;
+}
+
+.message-error {
+  @apply bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50;
+}
+
+.dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-2xl shadow-xl max-w-md w-full p-6;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply absolute z-10 px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    @apply bg-white text-black;
+  }
+  
+  .stats-card {
+    @apply bg-white border border-gray-300 shadow-none;
+  }
+}
